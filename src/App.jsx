@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import "./styles/style.css";
 import {
 	BrowserRouter as Router,
@@ -14,7 +15,17 @@ import Cart from "./pages/Cart";
 import Status from "./pages/Status";
 
 function App() {
-  return <div>App</div>;
+  return (
+	<BrowserRouter>
+	<Routes>
+		<Route path="/" element={<Landing />}></Route>
+		<Route path="/menu" element={<Menu />}></Route>
+		<Route path="/about" element={<About />}></Route>
+		<Route path="/cart" element={<Cart />}></Route>
+		<Route path="/status" element={<Status />}></Route>
+	</Routes>
+</BrowserRouter>
+  )
 }
 
 export default App;
