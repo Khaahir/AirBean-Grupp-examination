@@ -1,3 +1,3 @@
 export default function Menu() {
-	return <p>Menu</p>;
+	return <p>Men hehehu</p>;
 }
