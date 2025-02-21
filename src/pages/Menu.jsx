@@ -23,11 +23,11 @@ export default function Menu() {
           src="./src/assets/Top-leafs.png"
           alt="top leaf"
         />
-        <h1 className="Menu-header-title">Meny</h1>
-        <ul className="list-container">
+        <h1 className="menu-header-title">Meny</h1>
+        <ul className="">
           {data.map((item) => {
             return (
-              <li key={item.id}>
+              <li className="list-container" key={item.id}>
                 <span className="menu-title">{item.title}</span>
                 <span className="menu-desc">{item.desc}</span>
                 <span className="menu-price">{item.price} kr</span>
