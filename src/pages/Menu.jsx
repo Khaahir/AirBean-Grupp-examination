@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Button from "../Componets/Button/Button";
 
 export default function Menu() {
   const [data, setData] = useState([]);
@@ -30,7 +31,7 @@ export default function Menu() {
           {data.map((item) => {
             return (
               <li className="list-container" key={item.id}>
-                <span className="menu-title">{item.title}</span>
+                <span className="menu-title"><Button></Button>{item.title}</span>
                 <span className="menu-desc">{item.desc}</span>
                 <span className="menu-price">{item.price} kr</span>
               </li>
