@@ -25,7 +25,7 @@
 .list-container {
   color: $text-dark;
 
-  width: 20rem;
+  width: 25rem;
   height: 4rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -37,12 +37,15 @@
   grid-column: 1 /4;
   grid-row: 1;
   font-weight: $font-weight-primary;
+
 }
 
 .menu-desc {
   grid-column: 1/4;
   grid-row: 2;
   font-size: $font-size-xs;
+  margin-left: 3rem;
+ 
 }
 
 .menu-price {
@@ -57,4 +60,17 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.button{
+  font-size: 1.6rem;
+  background-color: black;
+  color: white;
+  border-radius: 99rem;
+  width: 2rem;
+  height: 2rem;
+  grid-column: 1/2;
+  grid-row: 1/ span -1;
+  text-align: center;
+  margin-right: 1rem;
 }
