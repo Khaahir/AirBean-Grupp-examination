@@ -1,0 +1,16 @@
+@import "../sass/mixins";
+@import "../sass/variables";
+// @import url(./styles.scss);
+
+
+.button {
+  &.cart {
+    @include button-big($bg-color: $color-brown);
+    
+  }
+
+  &.status {
+    @include button-big($bg-color: $color-white);
+    
+  }
+}
