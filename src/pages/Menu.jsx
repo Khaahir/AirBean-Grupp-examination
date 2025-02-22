@@ -11,7 +11,9 @@ export default function Menu() {
         const result = await resp.json();
         setData(result.menu);
         console.log(result.menu);
-      } catch (Error) {}
+      } catch (Error) {
+        console.log(Error);
+      }
     };
     getData();
   }, []);
