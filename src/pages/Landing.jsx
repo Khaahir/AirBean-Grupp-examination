@@ -15,7 +15,7 @@ const Landing = () => {
       <article className="landing-center">
         <img src={logo} />
         <h1>AIR BEAN</h1>
-        <p>DRONEDELIVERED COFFEE</p>
+        <p>DRONEDELIVERED COFFEE </p>
       </article>
 
       <article className="landing-right">
