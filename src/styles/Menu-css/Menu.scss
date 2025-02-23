@@ -61,9 +61,9 @@
   width: 100%;
 }
 
-.kex {
-  font-size: 1.6rem;
-  background-color: black;
+.button-menu {
+  font-size: 1.5rem;
+  background-color: $color-brown;
   color: white;
   border-radius: 99rem;
   width: 2rem;
@@ -71,5 +71,4 @@
   grid-column: 1/2;
   grid-row: 1 / span -1;
   text-align: center;
-  margin-right: 100px;
 }

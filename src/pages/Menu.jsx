@@ -35,13 +35,7 @@ export default function Menu() {
             return (
               <li className="list-container" key={item.id}>
                 <span className="menu-title">
-                  <Button
-                    onClick={() => sayhy()}
-                    variant={"vad är detta?"}
-                    className="kex"
-                  >
-                    +
-                  </Button>
+                  <Button variant={"menu"}>&#43;</Button>
                   {item.title}
                 </span>
                 <span className="menu-desc">{item.desc}</span>
