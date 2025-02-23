@@ -18,9 +18,9 @@ export default function Menu() {
     getData();
   }, []);
 
-  const sayhy = () => {
-    console.log("hej");
-  };
+  function sayHey(id) {
+    console.log({ id });
+  }
   return (
     <>
       <section className="menu-container">
@@ -30,12 +30,14 @@ export default function Menu() {
           alt="top leaf"
         />
         <h1 className="menu-header-title">Meny</h1>
-        <ul className="">
+        <ul className="menu-box">
           {data.map((item) => {
             return (
               <li className="list-container" key={item.id}>
                 <span className="menu-title">
-                  <Button variant={"menu"}>&#43;</Button>
+                  <Button onClick={() => sayHey(item.id)} variant={"menu"}>
+                    &#43;
+                  </Button>
                   {item.title}
                 </span>
                 <span className="menu-desc">{item.desc}</span>

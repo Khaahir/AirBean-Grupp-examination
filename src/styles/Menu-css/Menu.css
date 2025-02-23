@@ -36,7 +36,7 @@
 
 .list-container {
   color: #2f2926;
-  width: 25rem;
+  width: 22rem;
   height: 4rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -78,7 +78,9 @@
   border-radius: 99rem;
   width: 2rem;
   height: 2rem;
-  grid-column: 1/2;
-  grid-row: 1/span -1;
   text-align: center;
+  border: none;
+  margin-right: 1rem;
+  position: relative;
+  top: 0.5rem;
 }/*# sourceMappingURL=Menu.css.map */
