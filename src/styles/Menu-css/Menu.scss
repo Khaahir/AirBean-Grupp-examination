@@ -37,7 +37,6 @@
   grid-column: 1 /4;
   grid-row: 1;
   font-weight: $font-weight-primary;
-
 }
 
 .menu-desc {
@@ -45,7 +44,6 @@
   grid-row: 2;
   font-size: $font-size-xs;
   margin-left: 3rem;
- 
 }
 
 .menu-price {
@@ -62,7 +60,7 @@
   width: 100%;
 }
 
-.button{
+.menu-btn {
   font-size: 1.6rem;
   background-color: black;
   color: white;
@@ -70,7 +68,7 @@
   width: 2rem;
   height: 2rem;
   grid-column: 1/2;
-  grid-row: 1/ span -1;
+  grid-row: 1 / span -1;
   text-align: center;
   margin-right: 1rem;
 }

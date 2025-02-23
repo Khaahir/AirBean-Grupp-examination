@@ -31,7 +31,14 @@ export default function Menu() {
           {data.map((item) => {
             return (
               <li className="list-container" key={item.id}>
-                <span className="menu-title"><Button variant={"menu option btn"} text={"+ "} className="button"></Button>{item.title}</span>
+                <span className="menu-title">
+                  <Button
+                    variant={"menu option btn"}
+                    children={"+ "}
+                    className="menu-btn"
+                  ></Button>
+                  {item.title}
+                </span>
                 <span className="menu-desc">{item.desc}</span>
                 <span className="menu-price">{item.price} kr</span>
               </li>
