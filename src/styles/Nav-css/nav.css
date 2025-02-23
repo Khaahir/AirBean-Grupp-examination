@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "PT Serif";
+  src: url("..src/assets/fonts/PTSerif-Regular.ttf");
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("..src/assets/fonts/WorkSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Rufina Bold";
+  src: url("..src/assets/fonts/Rufina-Bold.ttf");
+}
+/*FONTS and TEXT*/
+body {
+  font-family: "PT Serif", serif;
+}
+
+.nav {
+  background-color: #2e2925;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.nav img {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  max-width: 48px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+@media (max-width: 730px) {
+  .nav {
+    padding: 1rem;
+  }
+  .nav img {
+    max-width: 40px;
+    top: 12px;
+    left: 12px;
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.links li {
+  list-style: none;
+  text-align: center;
+}
+.links li::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 8px auto;
+}
+.links a {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+@media (max-width: 730px) {
+  .links {
+    gap: 1.5rem;
+  }
+  .links a {
+    font-size: 1.5rem;
+  }
+  .links li::after {
+    width: 30px;
+  }
+}/*# sourceMappingURL=nav.css.map */

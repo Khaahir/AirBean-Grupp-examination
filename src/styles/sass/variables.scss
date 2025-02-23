@@ -1,4 +1,4 @@
-@import "./fonts.scss";
+@use "./fonts" as *;
 
 $color-primary: #f3e4e1;
 $color-green: #38846d;
@@ -6,21 +6,19 @@ $color-brown: #2e2925;
 $color-orange: #e5674e;
 $color-white: #ffffff;
 
-
-
 /*FONTS and TEXT*/
 //For <h1>, <h2>, <button>
-$font-primary: 'PT Serif', serif;
+$font-primary: "PT Serif", serif;
 $font-weight-primary: 700;
 //For <p>
-$font-secondary: 'Work Sans', sans-serif;
+$font-secondary: "Work Sans", sans-serif;
 $font-weight-secondary: 400;
 //For landing page (AIR BEAN)
-$font-welcomepage: 'Rufina', serif;
+$font-welcomepage: "Rufina", serif;
 $font-weight-welcomepage: 700;
 
 $text-light: #ffffff;
-$text-dark: #2F2926;
+$text-dark: #2f2926;
 
 $font-size-xxxl: 2.6rem; //AIR BEAN landind page & Page header (Meny, About)
 $font-size-xxl: 2.25rem; //Order status header
@@ -28,6 +26,6 @@ $font-size-xl: 2rem; //Page header("Din beställning"), Hamburger menu items
 $font-size-l: 1.5rem; //Button text
 $font-size-md: 1.4rem; // Menu item names & price, VD name, Total price, minutes left for delivery
 $font-size-md-2: 1.25rem; //Order page item name
-$font-size-sm: 0.88rem; //Text in about page (first part) 
+$font-size-sm: 0.88rem; //Text in about page (first part)
 $font-size-xs: 0.75rem; //Description of products, descr of total price, price of individual product on onder page, text in about page (second part), VD description
 $font-size-xxs: 0.6rem; //Landing page small text

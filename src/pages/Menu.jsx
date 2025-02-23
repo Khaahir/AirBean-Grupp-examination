@@ -11,13 +11,16 @@ export default function Menu() {
         );
         const result = await resp.json();
         setData(result.menu);
-        console.log(result.menu);
       } catch (Error) {
         console.log(Error);
       }
     };
     getData();
   }, []);
+
+  const sayhy = () => {
+    console.log("hej");
+  };
   return (
     <>
       <section className="menu-container">
@@ -33,10 +36,12 @@ export default function Menu() {
               <li className="list-container" key={item.id}>
                 <span className="menu-title">
                   <Button
-                    variant={"menu option btn"}
-                    children={"+ "}
-                    className="menu-btn"
-                  ></Button>
+                    onClick={() => sayhy()}
+                    variant={"vad är detta?"}
+                    className="kex"
+                  >
+                    +
+                  </Button>
                   {item.title}
                 </span>
                 <span className="menu-desc">{item.desc}</span>

@@ -35,7 +35,7 @@
 }
 
 .list-container {
-  color: #2F2926;
+  color: #2f2926;
   width: 25rem;
   height: 4rem;
   display: grid;
@@ -71,7 +71,7 @@
   width: 100%;
 }
 
-.button {
+.kex {
   font-size: 1.6rem;
   background-color: black;
   color: white;
@@ -79,7 +79,7 @@
   width: 2rem;
   height: 2rem;
   grid-column: 1/2;
-  grid-row: 1/span -1;
+  grid-row: 1 / span -1;
   text-align: center;
-  margin-right: 1rem;
-}/*# sourceMappingURL=Menu.css.map */
+  margin-right: 100px;
+} /*# sourceMappingURL=Menu.css.map */
