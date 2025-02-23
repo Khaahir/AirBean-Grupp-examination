@@ -35,7 +35,7 @@
 }
 
 .list-container {
-  color: #2F2926;
+  color: #2f2926;
   width: 25rem;
   height: 4rem;
   display: grid;
@@ -71,9 +71,9 @@
   width: 100%;
 }
 
-.button {
-  font-size: 1.6rem;
-  background-color: black;
+.button-menu {
+  font-size: 1.5rem;
+  background-color: #2e2926;
   color: white;
   border-radius: 99rem;
   width: 2rem;
@@ -82,4 +82,5 @@
   grid-row: 1/span -1;
   text-align: center;
   margin-right: 1rem;
+  border: none;
 }/*# sourceMappingURL=Menu.css.map */

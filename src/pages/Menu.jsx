@@ -32,11 +32,7 @@ export default function Menu() {
             return (
               <li className="list-container" key={item.id}>
                 <span className="menu-title">
-                  <Button
-                    variant={"menu option btn"}
-                    children={"+ "}
-                    className="menu-btn"
-                  ></Button>
+                  <Button variant={"menu"}>&#43;</Button>
                   {item.title}
                 </span>
                 <span className="menu-desc">{item.desc}</span>
