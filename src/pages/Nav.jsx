@@ -8,26 +8,26 @@ import "../styles/Nav-css/nav.scss";
 //TODO: QUE JE FAIS?  QUE va se passer qaund je presse le X?
 
 const Nav = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const navigate = useNavigate();
-  const handleClose = () => {
-    //window.history.back();
-    //window.close();
-    navigate("/");
+	const [isVisible, setIsVisible] = useState(true);
+	const navigate = useNavigate();
+	const handleClose = () => {
+		//window.history.back();
+		//window.close();
+		navigate(-1);
 
-    setIsVisible(false);
+		setIsVisible(false);
 
-    console.log("Back to LANDING PAGE");
-  };
+		console.log("Back to LANDING PAGE");
+	};
 
-  return isVisible ? (
-    <nav className="nav">
-      <img src={CloseIcon} alt="Close" onClick={handleClose} />
-      <section className="links">
-        <MenuNav menuLinks={menuLinks} />
-      </section>
-    </nav>
-  ) : null;
+	return isVisible ? (
+		<nav className="nav">
+			<img src={CloseIcon} alt="Close" onClick={handleClose} />
+			<section className="links">
+				<MenuNav menuLinks={menuLinks} />
+			</section>
+		</nav>
+	) : null;
 };
 
 export default Nav;

@@ -1,11 +1,6 @@
 import React from "react";
 import "./styles/style.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  BrowserRouter,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Landing from "./pages/Landing";
 import Menu from "./pages/Menu";
@@ -14,21 +9,21 @@ import Cart from "./pages/Cart";
 import Status from "./pages/Status";
 import Nav from "./pages/Nav";
 function App() {
-  return (
-    <>
-      <Cart></Cart>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Landing />}></Route>
-          <Route path="/menu" element={<Menu />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/cart" element={<Cart />}></Route>
-          <Route path="/status" element={<Status />}></Route>
-          <Route path="/nav" element={<Nav />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+	return (
+		<>
+			<Cart></Cart>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Landing />}></Route>
+					<Route path="/menu" element={<Menu />}></Route>
+					<Route path="/about" element={<About />}></Route>
+					<Route path="/cart" element={<Cart />}></Route>
+					<Route path="/status" element={<Status />}></Route>
+					<Route path="/nav" element={<Nav />}></Route>
+				</Routes>
+			</BrowserRouter>
+		</>
+	);
 }
 
 export default App;

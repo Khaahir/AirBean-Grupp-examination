@@ -1,0 +1,32 @@
+@use "../sass/variables" as *;
+
+.header-container {
+  position: relative;
+  height: 17vh;
+}
+
+.bg-header {
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.buttons-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  padding: 1rem;
+  margin-top: -1rem;
+}
+
+.nav-link, .cart-link {
+  background: none;
+  border: none;
+}
+
+.cart-link img {
+  width: 48px;
+}
