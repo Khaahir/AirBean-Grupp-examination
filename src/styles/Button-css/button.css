@@ -1,18 +1,18 @@
 @font-face {
   font-family: "PT Serif";
-  src: url("..src/assets/fonts/PTSerif-Regular.ttf");
+  src: url("../../../src/assets/fonts/PTSerif-Regular.ttf");
 }
 @font-face {
   font-family: "Work Sans";
-  src: url("..src/assets/fonts/WorkSans-Regular.ttf");
+  src: url("../../../src/assets/fonts/WorkSans-Regular.ttf");
 }
 @font-face {
   font-family: "Rufina Bold";
-  src: url("..src/assets/fonts/Rufina-Bold.ttf");
+  src: url("../../../src/assets/fonts/Rufina-Bold.ttf");
 }
 /*FONTS and TEXT*/
 .button.cart {
-  background-color: #2e2925;
+  background-color: #2e2926;
   border: none;
   border-radius: 5rem;
   color: #ffffff;
@@ -30,6 +30,4 @@
   font-weight: 700;
   font-size: 1.5rem;
   padding: 0.7rem 1.5rem 0.7rem 1.5rem;
-}
-
-/*# sourceMappingURL=Button.css.map */
+}/*# sourceMappingURL=Button.css.map */
