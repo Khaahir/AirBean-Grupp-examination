@@ -11,10 +11,10 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-<<<<<<< HEAD
+
   overflow: hidden;
-=======
->>>>>>> About
+
+
 }
 
 .landing-left,
@@ -27,21 +27,6 @@
   img {
     height: 100%;
     width: auto;
-<<<<<<< HEAD
-    max-width: 100%;
-  }
-}
-
-.landing-center {
-  text-align: center;
-
-  img {
-    width: 5rem;
-
-    @media (max-width: 768px) {
-      width: 4rem;
-    }
-=======
   }
 }
 .landing-center {
@@ -50,31 +35,11 @@
 
   img {
     width: 5rem;
->>>>>>> About
   }
 
   h1 {
     font-family: $font-welcomepage;
     font-weight: $font-weight-welcomepage;
-<<<<<<< HEAD
-    font-size: 5vw;
-    margin: 2rem 0;
-
-    @media (max-width: 768px) {
-      font-size: 6vw;
-    }
-  }
-
-  p {
-    font-size: 3vw;
-    letter-spacing: 4px;
-
-    @media (max-width: 768px) {
-      font-size: 4vw;
-    }
-  }
-}
-=======
     font-size: $font-size-xxxl;
     margin: 2rem 0;
   }
@@ -86,4 +51,3 @@
 }
 
 
->>>>>>> About
