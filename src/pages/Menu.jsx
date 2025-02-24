@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "../Componets/Button/Button";
+import HeaderBG from "../components/headerBG";
+import FooterBG from "../components/footerBG";
 
 export default function Menu() {
   const [data, setData] = useState([]);
@@ -11,45 +13,40 @@ export default function Menu() {
         );
         const result = await resp.json();
         setData(result.menu);
-        console.log(result.menu);
       } catch (Error) {
         console.log(Error);
       }
     };
     getData();
   }, []);
+
+  function sayHey(id, price) {
+    console.log({ id, price });
+  }
+
   return (
     <>
       <section className="menu-container">
-        <img
-          className="top-leafs"
-          src="./src/assets/Top-leafs.png"
-          alt="top leaf"
-        />
+        <HeaderBG></HeaderBG>
         <h1 className="menu-header-title">Meny</h1>
-        <ul className="">
+        <ul className="menu-box">
           {data.map((item) => {
             return (
               <li className="list-container" key={item.id}>
-                <span className="menu-title">
-                  <Button
-                    variant={"menu option btn"}
-                    children={"+ "}
-                    className="menu-btn"
-                  ></Button>
-                  {item.title}
-                </span>
+                <Button
+                  onClick={() => sayHey(item.id, item.price)}
+                  variant={"menu"}
+                >
+                  +
+                </Button>
+                <span className="menu-title">{item.title}</span>
                 <span className="menu-desc">{item.desc}</span>
                 <span className="menu-price">{item.price} kr</span>
               </li>
             );
           })}
         </ul>
-        <img
-          className="buttom-leafs"
-          src="./src/assets/buttom-leafs.png"
-          alt="buttom leafs"
-        />
+        <FooterBG></FooterBG>
       </section>
     </>
   );
