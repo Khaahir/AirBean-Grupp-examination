@@ -11,13 +11,16 @@ export default function Menu() {
         );
         const result = await resp.json();
         setData(result.menu);
-        console.log(result.menu);
       } catch (Error) {
         console.log(Error);
       }
     };
     getData();
   }, []);
+
+  function sayHey(id) {
+    console.log({ id });
+  }
   return (
     <>
       <section className="menu-container">
@@ -27,11 +30,16 @@ export default function Menu() {
           alt="top leaf"
         />
         <h1 className="menu-header-title">Meny</h1>
-        <ul className="">
+        <ul className="menu-box">
           {data.map((item) => {
             return (
               <li className="list-container" key={item.id}>
-                <span className="menu-title"><Button variant={"menu option btn"} text={"+ "} className="button"></Button>{item.title}</span>
+                <span className="menu-title">
+                  <Button onClick={() => sayHey(item.id)} variant={"menu"}>
+                    &#43;
+                  </Button>
+                  {item.title}
+                </span>
                 <span className="menu-desc">{item.desc}</span>
                 <span className="menu-price">{item.price} kr</span>
               </li>

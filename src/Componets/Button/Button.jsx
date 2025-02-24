@@ -1,7 +1,11 @@
 import "../../styles/Button-css/Button.scss";
 
-const Button = ({ text, variant }) => {
-  return <button className={`button ${variant}`}>{text}</button>;
+const Button = ({ children, variant, onClick }) => {
+  return (
+    <button onClick={onClick} className={`button-${variant}`}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;
