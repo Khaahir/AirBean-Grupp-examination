@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Cart from "./pages/Cart";
 import Status from "./pages/Status";
 import Nav from "./pages/Nav";
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <>
@@ -25,6 +26,7 @@ function App() {
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/status" element={<Status />}></Route>
           <Route path="/nav" element={<Nav />}></Route>
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
