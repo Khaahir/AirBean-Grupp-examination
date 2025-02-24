@@ -8,7 +8,7 @@
   font-family: $font-primary;
   font-weight: $font-weight-primary;
   font-size: $font-size-l;
-  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+  padding: 0.7rem 1.5rem;
 }
 
 @mixin button-small($bg-color) {
@@ -19,15 +19,15 @@
   font-family: $font-primary;
   font-weight: $font-weight-primary;
   font-size: $font-size-l;
-  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+  padding: 0.5rem 1.4rem;
 }
 
 .button {
-  &.cart {
+  &.cartbtn {
     @include button-big($color-brown);
   }
 
-  &.status {
+  &.statusbtn {
     @include button-small($color-primary);
   }
 }

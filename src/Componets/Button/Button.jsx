@@ -1,8 +1,7 @@
 import "../../styles/Button-css/Button.scss";
 
-
-// skicka variant='cart'om du vill använda det i cart komponenten
-// skicka variant='status'om du vill använda det i status sidan
+// skicka variant='cartbtn'om du vill använda det i cart komponenten
+// skicka variant='statusbtn'om du vill använda det i status sidan
 
 const Button = ({ children, variant, onClick }) => {
   return (
@@ -10,6 +9,6 @@ const Button = ({ children, variant, onClick }) => {
       {children}
     </button>
   );
-
+};
 
 export default Button;
