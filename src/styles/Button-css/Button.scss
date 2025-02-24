@@ -1,4 +1,4 @@
-@import "../sass/variables";
+@use "../sass/variables" as *;
 
 @mixin button-big($bg-color) {
   background-color: $bg-color;
