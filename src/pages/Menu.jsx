@@ -37,7 +37,7 @@ export default function Menu() {
                   onClick={() => sayHey(item.id, item.price)}
                   variant={"menu"}
                 >
-                  &#43;
+                  +
                 </Button>
                 <span className="menu-title">{item.title}</span>
                 <span className="menu-desc">{item.desc}</span>
