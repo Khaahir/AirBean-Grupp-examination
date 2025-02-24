@@ -1,4 +1,7 @@
+
 @use "../sass/variables" as *;
+
+
 
 .menu-container {
   height: 100vh;
@@ -37,6 +40,9 @@
   grid-column: 1 /4;
   grid-row: 1;
   font-weight: $font-weight-primary;
+
+
+
 }
 
 .menu-desc {
@@ -44,6 +50,7 @@
   grid-row: 2;
   font-size: $font-size-xs;
   margin-left: 3rem;
+
 }
 
 .menu-price {
@@ -58,19 +65,4 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-.button-menu {
-  font-size: 1.5rem;
-  background-color: $color-brown;
-  color: white;
-  border-radius: 99rem;
-  width: 2rem;
-  height: 2rem;
-  text-align: center;
-  border: none;
-  margin-right: 1rem;
-
-  position: relative;
-  top: 0.5rem;
 }

@@ -1,4 +1,6 @@
+
 @use "../sass/variables" as *;
+
 
 .landing-container {
   background-color: $color-green;
@@ -9,7 +11,10 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+
   overflow: hidden;
+
+
 }
 
 .landing-left,
@@ -22,38 +27,27 @@
   img {
     height: 100%;
     width: auto;
-    max-width: 100%;
   }
 }
-
 .landing-center {
   text-align: center;
+  
 
   img {
     width: 5rem;
-
-    @media (max-width: 768px) {
-      width: 4rem;
-    }
   }
 
   h1 {
     font-family: $font-welcomepage;
     font-weight: $font-weight-welcomepage;
-    font-size: 5vw;
+    font-size: $font-size-xxxl;
     margin: 2rem 0;
-
-    @media (max-width: 768px) {
-      font-size: 6vw;
-    }
   }
 
   p {
-    font-size: 3vw;
+    font-size: $font-size-sm;
     letter-spacing: 4px;
-
-    @media (max-width: 768px) {
-      font-size: 4vw;
-    }
   }
 }
+
+

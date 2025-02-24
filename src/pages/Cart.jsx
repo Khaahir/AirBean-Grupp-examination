@@ -1,5 +1,15 @@
-export default function Cart() {
+import { useState } from "react";
 
-	
-	return <p>Cart</p>;
+export default function Cart() {
+	const [isopen, setIsOpen] = useState(false);
+
+	return (
+		<>
+			{isopen && (
+				<section className="cart-container">
+					<div className="cart"></div>
+				</section>
+			)}
+		</>
+	);
 }
