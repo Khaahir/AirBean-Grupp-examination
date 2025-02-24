@@ -69,17 +69,4 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-.button-menu {
-  font-size: 1.6rem;
-  background-color: black;
-  color: white;
-  border-radius: 99rem;
-  width: 2rem;
-  height: 2rem;
-  grid-column: 1/2;
-  grid-row: 1/span -1;
-  text-align: center;
-  margin-right: 1rem;
 }/*# sourceMappingURL=Menu.css.map */
