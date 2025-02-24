@@ -4,8 +4,8 @@
 
 
 .menu-container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 375px;
   background-color: $color-primary;
   display: flex;
   align-items: center;
@@ -37,6 +37,7 @@
 
 .menu-title {
   font-size: $font-size-md;
+ 
   grid-column: 1 /4;
   grid-row: 1;
   font-weight: $font-weight-primary;
@@ -68,7 +69,7 @@
 }
 
 
-.button{
+.button-menu{
   font-size: 1.6rem;
   background-color: black;
   color: white;

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "../Componets/Button/Button";
+import HeaderBG from "../components/headerBG";
+import FooterBG from "../components/footerBG";
 
 export default function Menu() {
   const [data, setData] = useState([]);
@@ -27,11 +29,7 @@ export default function Menu() {
   return (
     <>
       <section className="menu-container">
-        <img
-          className="top-leafs"
-          src="./src/assets/Top-leafs.png"
-          alt="top leaf"
-        />
+    <HeaderBG></HeaderBG>
         <h1 className="menu-header-title">Meny</h1>
         <ul className="menu-box">
           {data.map((item) => {
@@ -47,11 +45,7 @@ export default function Menu() {
             );
           })}
         </ul>
-        <img
-          className="buttom-leafs"
-          src="./src/assets/buttom-leafs.png"
-          alt="buttom leafs"
-        />
+<FooterBG></FooterBG>
       </section>
     </>
   );

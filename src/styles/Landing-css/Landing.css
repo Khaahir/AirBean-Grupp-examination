@@ -1,14 +1,14 @@
 @font-face {
   font-family: "PT Serif";
-  src: url("..src/assets/fonts/PTSerif-Regular.ttf");
+  src: url("../../../src/assets/fonts/PTSerif-Regular.ttf");
 }
 @font-face {
   font-family: "Work Sans";
-  src: url("..src/assets/fonts/WorkSans-Regular.ttf");
+  src: url("../../../src/assets/fonts/WorkSans-Regular.ttf");
 }
 @font-face {
   font-family: "Rufina Bold";
-  src: url("..src/assets/fonts/Rufina-Bold.ttf");
+  src: url("../../../src/assets/fonts/Rufina-Bold.ttf");
 }
 /*FONTS and TEXT*/
 .landing-container {
@@ -20,10 +20,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-<<<<<<< HEAD
   overflow: hidden;
-=======
->>>>>>> About
 }
 
 .landing-left,
@@ -37,10 +34,6 @@
 .landing-right img {
   height: 100%;
   width: auto;
-<<<<<<< HEAD
-  max-width: 100%;
-=======
->>>>>>> About
 }
 
 .landing-center {
@@ -49,32 +42,6 @@
 .landing-center img {
   width: 5rem;
 }
-<<<<<<< HEAD
-@media (max-width: 768px) {
-  .landing-center img {
-    width: 4rem;
-  }
-}
-.landing-center h1 {
-  font-family: "Rufina", serif;
-  font-weight: 700;
-  font-size: 5vw;
-  margin: 2rem 0;
-}
-@media (max-width: 768px) {
-  .landing-center h1 {
-    font-size: 6vw;
-  }
-}
-.landing-center p {
-  font-size: 3vw;
-  letter-spacing: 4px;
-}
-@media (max-width: 768px) {
-  .landing-center p {
-    font-size: 4vw;
-  }
-=======
 .landing-center h1 {
   font-family: "Rufina", serif;
   font-weight: 700;
@@ -84,5 +51,4 @@
 .landing-center p {
   font-size: 0.88rem;
   letter-spacing: 4px;
->>>>>>> About
 }/*# sourceMappingURL=Landing.css.map */
