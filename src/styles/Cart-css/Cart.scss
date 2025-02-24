@@ -1,0 +1,18 @@
+@use "../sass/variables" as *;
+.cart-container {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.664);
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart {
+  background-color: $color-primary;
+  height: 36rem;
+  width: 21rem;
+  border-radius: 0.5rem;
+}
