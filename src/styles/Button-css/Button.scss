@@ -1,6 +1,6 @@
 @use "../sass/variables" as *;
 
-@mixin button-big($bg-color: $color-brown) {
+@mixin button-big($bg-color) {
   background-color: $bg-color;
   border: none;
   border-radius: 5rem;
@@ -11,11 +11,11 @@
   padding: 0.7rem 1.5rem 0.7rem 1.5rem;
 }
 
-@mixin button-small {
-  background-color: $color-brown;
+@mixin button-small($bg-color) {
+  background-color: $bg-color;
   border: none;
   border-radius: 5rem;
-  color: $text-light;
+  color: $text-dark;
   font-family: $font-primary;
   font-weight: $font-weight-primary;
   font-size: $font-size-l;
@@ -24,10 +24,10 @@
 
 .button {
   &.cart {
-    @include button-big($bg-color: $color-brown);
+    @include button-big($color-brown);
   }
 
   &.status {
-    @include button-big($bg-color: $color-white);
+    @include button-small($color-primary);
   }
 }
