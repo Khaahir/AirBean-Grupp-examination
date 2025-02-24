@@ -11,6 +11,8 @@ export default function Menu() {
         );
         const result = await resp.json();
         setData(result.menu);
+
+
       } catch (Error) {
         console.log(Error);
       }
@@ -21,6 +23,7 @@ export default function Menu() {
   function sayHey(id) {
     console.log({ id });
   }
+
   return (
     <>
       <section className="menu-container">
@@ -34,12 +37,10 @@ export default function Menu() {
           {data.map((item) => {
             return (
               <li className="list-container" key={item.id}>
-                <span className="menu-title">
                   <Button onClick={() => sayHey(item.id)} variant={"menu"}>
                     &#43;
                   </Button>
                   {item.title}
-                </span>
                 <span className="menu-desc">{item.desc}</span>
                 <span className="menu-price">{item.price} kr</span>
               </li>

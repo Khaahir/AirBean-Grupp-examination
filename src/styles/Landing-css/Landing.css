@@ -20,7 +20,10 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+<<<<<<< HEAD
   overflow: hidden;
+=======
+>>>>>>> About
 }
 
 .landing-left,
@@ -34,7 +37,10 @@
 .landing-right img {
   height: 100%;
   width: auto;
+<<<<<<< HEAD
   max-width: 100%;
+=======
+>>>>>>> About
 }
 
 .landing-center {
@@ -43,6 +49,7 @@
 .landing-center img {
   width: 5rem;
 }
+<<<<<<< HEAD
 @media (max-width: 768px) {
   .landing-center img {
     width: 4rem;
@@ -67,4 +74,15 @@
   .landing-center p {
     font-size: 4vw;
   }
+=======
+.landing-center h1 {
+  font-family: "Rufina", serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  margin: 2rem 0;
+}
+.landing-center p {
+  font-size: 0.88rem;
+  letter-spacing: 4px;
+>>>>>>> About
 }/*# sourceMappingURL=Landing.css.map */

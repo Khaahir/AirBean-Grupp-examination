@@ -1,5 +1,7 @@
+
 @use "../sass/variables" as *;
 @use "../Menu-css/Menu";
+
 
 @mixin button-big($bg-color: $color-brown) {
   background-color: $bg-color;
@@ -33,6 +35,7 @@
   }
 }
 
+
 .button-menu {
   font-size: 1.5rem;
   background-color: $color-brown;
@@ -45,3 +48,4 @@
   text-align: center;
   border: none;
 }
+

@@ -13,7 +13,6 @@ import About from "./pages/About";
 import Cart from "./pages/Cart";
 import Status from "./pages/Status";
 import Nav from "./pages/Nav";
-
 function App() {
   return (
 	<BrowserRouter>
@@ -23,7 +22,6 @@ function App() {
 		<Route path="/about" element={<About />}></Route>
 		<Route path="/cart" element={<Cart />}></Route>
 		<Route path="/status" element={<Status />}></Route>
-		<Route path="/nav" element={<Nav />}></Route>
 	</Routes>
 </BrowserRouter>
   )
