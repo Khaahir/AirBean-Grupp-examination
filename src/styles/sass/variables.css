@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "PT Serif";
+  src: url("..src/assets/fonts/PTSerif-Regular.ttf");
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("..src/assets/fonts/WorkSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Rufina Bold";
+  src: url("..src/assets/fonts/Rufina-Bold.ttf");
+}
+/*FONTS and TEXT*//*# sourceMappingURL=variables.css.map */

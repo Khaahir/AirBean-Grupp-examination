@@ -1,0 +1,68 @@
+@import "../sass/styles.scss";
+
+// Dimensions iPhone SE: 375 * 667
+
+$font-weight-third: 600;
+$line-height-primary: 1.2rem;
+
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $color-primary;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: $font-size-xxxl;
+  font-family: $font-primary;
+  font-weight: $font-weight-primary;
+}
+
+.p1 {
+  font-size: $font-size-sm;
+  font-family: $font-secondary;
+  font-weight: $font-weight-third;
+  line-height: $line-height-primary;
+}
+
+.p2{
+  font-size: $font-size-xs;
+  font-family: $font-secondary;
+  font-weight: $font-weight-secondary;
+  line-height: $line-height-primary;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 2rem 2rem;
+
+  .about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .vd-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    img {
+      width: 4.625rem;
+      aspect-ratio: 1/1;
+    }
+  
+    h2 {
+      font-family: $font-primary;
+      font-size: $font-size-md;
+    }
+  }
+}

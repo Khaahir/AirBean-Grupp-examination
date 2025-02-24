@@ -1,0 +1,76 @@
+@import "../sass/variables";
+.menu-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.top-leafs {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.menu-header-title {
+  font-family: $font-primary;
+  font-weight: $font-weight-primary;
+  font-size: $font-size-xxxl;
+  margin-bottom: 3rem;
+}
+
+.list-container {
+  color: $text-dark;
+
+  width: 25rem;
+  height: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.menu-title {
+  font-size: $font-size-md;
+  grid-column: 1 /4;
+  grid-row: 1;
+  font-weight: $font-weight-primary;
+
+}
+
+.menu-desc {
+  grid-column: 1/4;
+  grid-row: 2;
+  font-size: $font-size-xs;
+  margin-left: 3rem;
+ 
+}
+
+.menu-price {
+  font-size: 1.4rem;
+  grid-column: 4/5;
+  grid-row: 1/3;
+  text-align: center;
+  font-weight: $font-weight-primary;
+}
+
+.buttom-leafs {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.button{
+  font-size: 1.6rem;
+  background-color: black;
+  color: white;
+  border-radius: 99rem;
+  width: 2rem;
+  height: 2rem;
+  grid-column: 1/2;
+  grid-row: 1/ span -1;
+  text-align: center;
+  margin-right: 1rem;
+}
