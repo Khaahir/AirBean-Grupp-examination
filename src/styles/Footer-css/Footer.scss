@@ -1,0 +1,8 @@
+@use "../sass/variables" as *;
+
+.footer-container {
+    background-image: url('../../assets/svg/footer_bg.svg'); 
+    background-repeat: no-repeat;
+    background-position: bottom ;
+    height: 6rem;
+  }

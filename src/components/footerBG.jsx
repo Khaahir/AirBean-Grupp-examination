@@ -1,5 +1,5 @@
-import footerphoto from "../assets/svg/footer_bg.svg";
+import "../styles/Footer-css/Footer.scss";
 
 export default function FooterBG() {
-	return <img src={footerphoto} />;
+	return <div className="footer-container"></div>;
 }

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import headerphoto from "../assets/svg/header_bg.svg";
 import navicon from "../assets/svg/navicon.svg";
 import carticon from "../assets/cart.png";
 import "../styles/Header-css/Header.scss";
@@ -20,7 +19,6 @@ export default function HeaderBG() {
 
 	return (
 		<div className="header-container">
-			<img src={headerphoto} alt="BG header" className="bg-header" />
 			<section className="buttons-container">
 				{/* Nav Button */}
 				<button onClick={handleNavClick} className="nav-link">
