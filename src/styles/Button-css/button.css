@@ -11,58 +11,6 @@
   src: url("../../../src/assets/fonts/Rufina-Bold.ttf");
 }
 /*FONTS and TEXT*/
-.menu-container {
-  height: 100%;
-  width: 375px;
-  background-color: #f3e4e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.menu-header-title {
-  font-family: "PT Serif", serif;
-  font-weight: 700;
-  font-size: 2.6rem;
-  margin-bottom: 3rem;
-}
-
-.list-container {
-  color: #2f2926;
-  width: 22rem;
-  height: 4rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.menu-title {
-  font-size: 1.4rem;
-  grid-column: 1/4;
-  grid-row: 1;
-  font-weight: 700;
-  justify-self: start;
-  margin-left: 3rem;
-}
-
-.menu-desc {
-  grid-column: 1/4;
-  grid-row: 2;
-  font-size: 0.75rem;
-  justify-self: center;
-}
-
-.menu-price {
-  font-size: 1.4rem;
-  grid-column: 4/5;
-  grid-row: 1/3;
-  text-align: center;
-  font-weight: 700;
-  justify-self: center;
-  margin-right: 1rem;
-}
-
 .button.cart {
   background-color: #2e2926;
   border: none;
@@ -82,15 +30,4 @@
   font-weight: 700;
   font-size: 1.5rem;
   padding: 0.7rem 1.5rem 0.7rem 1.5rem;
-}
-
-.button-menu {
-  font-size: 1.5rem;
-  background-color: #2e2926;
-  color: white;
-  border-radius: 99rem;
-  width: 2rem;
-  height: 2rem;
-  border: none;
-  position: absolute;
 }/*# sourceMappingURL=Button.css.map */
