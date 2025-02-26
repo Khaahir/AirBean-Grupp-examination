@@ -8,6 +8,7 @@ body {
 .nav {
   background-color: $color-brown; // Replacing var(--dark-brown) with SCSS variable
   height: 100vh;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   align-items: center;

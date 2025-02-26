@@ -1,4 +1,3 @@
-
 import "../styles/About-css/About.scss";
 import img_vd from "../assets/img_vd.png";
 import HeaderBG from "../components/headerBG.jsx";
@@ -48,5 +47,4 @@ export default function About() {
 			<FooterBG />
 		</>
 	);
-
 }

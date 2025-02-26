@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Cart from "./pages/Cart";
 import Status from "./pages/Status";
 import Nav from "./pages/Nav";
-
+import NotFound from "./pages/NotFound";
 function App() {
   const [cart, setCart] = useState([]);
 
