@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: fixed;
 }
 
 .menu-header-title {
@@ -20,7 +21,7 @@
 .list-container {
   color: $text-dark;
   width: 22rem;
-  height: 4rem;
+  height: 5rem;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(2, 1fr);
