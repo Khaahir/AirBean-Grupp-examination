@@ -15,6 +15,7 @@ const Nav = () => {
   const [isVisible, setIsVisible] = useState(true);
   const navigate = useNavigate();
 
+
   // Use useEffect
   useEffect(() => {
     const savedVisibility = localStorage.getItem("navVisibility");
@@ -25,6 +26,8 @@ const Nav = () => {
 
   // Apporter du localStorage
   const handleClose = () => {
+    navigate(-1); // Gå tillbaka en sida i historiken eller man ockå göra navigate("/"); för att gå till startsidan
+    setIsVisible(false); // Dölj navigationsmenyn
     setIsVisible(false);
     localStorage.setItem("navVisibility", JSON.stringify(false));
 
@@ -33,6 +36,14 @@ const Nav = () => {
     navigate("/");
   };
 
+  return isVisible && (
+    <nav className="nav">
+      <img 
+        src={CloseIcon} 
+        alt="Close" 
+        onClick={handleClose} 
+        className="close-icon" 
+      />
   return (
     <nav className={`nav ${isVisible ? "visible" : "hidden"}`}>
       <button
@@ -47,6 +58,7 @@ const Nav = () => {
         <MenuNav menuLinks={menuLinks} />
       </section>
     </nav>
+  );
   );
 };
 
