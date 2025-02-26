@@ -1,45 +1,9 @@
-@import "../sass/variables";
-
 .landing-container {
-  background-color: $color-green;
-  color: $color-primary;
-  height: 100vh;
+  
   width: 375px;
-  display: flex;
-  align-items: center;
+  height: 667px;
+  background-image: url("../../assets/Home.png");
+  background-size: cover;
   cursor: pointer;
-  overflow: hidden;
-}
 
-.landing-left,
-.landing-right {
-  height: 100%;
-  width: 140px;
-  position: relative;
-
-  img {
-    height: 100%;
-    object-fit: cover;
-    
-  }
-}
-
-.landing-center {
-  text-align: center;
-  img {
-    width: 5rem;
-  }
-
-  h1 {
-    font-family: $font-welcomepage;
-    font-weight: $font-weight-welcomepage;
-    font-size: $font-size-xxxl;
-    margin: 1rem 0;
-    
-  }
-
-  p {
-    font-size: $font-size-xxs;
-    letter-spacing: 3px;
-  }
 }
