@@ -21,7 +21,7 @@ export default function Cart({ cart }) {
               {cart.map((item, index) => (
                 <li key={index} className="cart-item">
                   <span className="cart-item-name">
-                    {item.title} : {item.quantity}{" "}
+                    {item.title} : {item.quantity}
                   </span>
                   <span></span>
                   <span className="cart-item-price">
@@ -34,11 +34,10 @@ export default function Cart({ cart }) {
               <span className="cart-total">Total</span>
               <span className="cart-total-price">
                 <span className="cart-total">
-                  {" "}
                   {cart.reduce(
                     (acc, item) => acc + item.price * item.quantity,
                     0
-                  )}{" "}
+                  )}
                   kr
                 </span>
               </span>
