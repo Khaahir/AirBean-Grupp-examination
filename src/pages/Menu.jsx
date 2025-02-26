@@ -3,7 +3,7 @@ import Button from "../Componets/Button/Button";
 import HeaderBG from "../components/headerBG";
 import FooterBG from "../components/footerBG";
 
-export default function Menu() {
+export default function Menu({ addToCart }) {
   const [data, setData] = useState([]);
   useEffect(() => {
     const getData = async () => {
@@ -19,11 +19,6 @@ export default function Menu() {
     };
     getData();
   }, []);
-
-  function sayHey(id, price) {
-    console.log({ id, price });
-  }
-
   return (
     <>
       <section className="menu-container">
@@ -33,10 +28,7 @@ export default function Menu() {
           {data.map((item) => {
             return (
               <li className="list-container" key={item.id}>
-                <Button
-                  onClick={() => sayHey(item.id, item.price)}
-                  variant={"menu"}
-                >
+                <Button onClick={() => addToCart(item)} variant={"menu"}>
                   &#43;
                 </Button>
                 <span className="menu-title">{item.title}</span>
