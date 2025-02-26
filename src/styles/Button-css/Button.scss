@@ -1,7 +1,6 @@
 @use "../sass/variables" as *;
-@use "../Menu-css/Menu" as *;
 
-@mixin button-big($bg-color: $color-brown) {
+@mixin button-big($bg-color) {
   background-color: $bg-color;
   border: none;
   border-radius: 5rem;
@@ -9,37 +8,26 @@
   font-family: $font-primary;
   font-weight: $font-weight-primary;
   font-size: $font-size-l;
-  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+  padding: 0.7rem 1.5rem;
 }
 
-@mixin button-small {
-  background-color: $color-brown;
+@mixin button-small($bg-color) {
+  background-color: $bg-color;
   border: none;
   border-radius: 5rem;
-  color: $text-light;
+  color: $text-dark;
   font-family: $font-primary;
   font-weight: $font-weight-primary;
   font-size: $font-size-l;
-  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+  padding: 0.5rem 1.4rem;
 }
 
 .button {
-  &.cart {
-    @include button-big($bg-color: $color-brown);
+  &.cartbtn {
+    @include button-big($color-brown);
   }
 
-  &.status {
-    @include button-big($bg-color: $color-white);
+  &.statusbtn {
+    @include button-small($color-primary);
   }
-}
-
-.button-menu {
-  font-size: 1.5rem;
-  background-color: $color-brown;
-  color: white;
-  border-radius: 99rem;
-  width: 2rem;
-  height: 2rem;
-  border: none;
-  position: absolute;
 }
