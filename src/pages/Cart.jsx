@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Button from "../Componets/Button/Button";
 import { Link } from "react-router-dom";
+import '../styles/Cart-css/Cart.scss'
 const quantity = 0;
-export default function Cart({ cart, removeFromCart }) {
+export default function Cart({ cart, removeFromCart ,setCart}) {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpenCart = () => {
     setIsOpen((prevVal) => !prevVal);
+    setCart([]);
   };
 
   return (

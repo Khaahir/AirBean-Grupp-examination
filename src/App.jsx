@@ -11,6 +11,7 @@ import Nav from "./pages/Nav";
 import NotFound from "./pages/NotFound";
 function App() {
   const [cart, setCart] = useState([]);
+  const [orderHistory, setOrderHistory] = useState({});
 
   const addToCart = async (item) => {
     setCart((prevCart) => {
@@ -57,22 +58,25 @@ function App() {
       }
 
       const responseData = await resp.json();
-      console.log("Item added to cart:", responseData);
+      setOrderHistory(responseData)
+      
     } catch (error) {
       console.log("Error in addToCart function:", error);
     }
   };
+  
 
   return (
     <>
       <BrowserRouter>
         <Nav />
-        <Cart cart={cart} />
+        <Cart cart={cart} setCart={setCart} />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/menu" element={<Menu addToCart={addToCart} />} />
           <Route path="/about" element={<About />} />
-          <Route path="/status" element={<Status />} />
+          <Route path="/status" element={<Status orderHistory={orderHistory} />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
