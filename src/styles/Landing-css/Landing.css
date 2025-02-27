@@ -1,54 +1,7 @@
-@font-face {
-  font-family: "PT Serif";
-  src: url("../../../src/assets/fonts/PTSerif-Regular.ttf");
-}
-@font-face {
-  font-family: "Work Sans";
-  src: url("../../../src/assets/fonts/WorkSans-Regular.ttf");
-}
-@font-face {
-  font-family: "Rufina Bold";
-  src: url("../../../src/assets/fonts/Rufina-Bold.ttf");
-}
-/*FONTS and TEXT*/
 .landing-container {
-  background-color: #38846d;
-  color: #f3e4e1;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 375px;
+  height: 667px;
+  background-image: url("../../assets/Home.png");
+  background-size: cover;
   cursor: pointer;
-  overflow: hidden;
-}
-
-.landing-left,
-.landing-right {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.landing-left img,
-.landing-right img {
-  height: 100%;
-  width: auto;
-}
-
-.landing-center {
-  text-align: center;
-}
-.landing-center img {
-  width: 5rem;
-}
-.landing-center h1 {
-  font-family: "Rufina", serif;
-  font-weight: 700;
-  font-size: 2.6rem;
-  margin: 2rem 0;
-}
-.landing-center p {
-  font-size: 0.88rem;
-  letter-spacing: 4px;
 }/*# sourceMappingURL=Landing.css.map */

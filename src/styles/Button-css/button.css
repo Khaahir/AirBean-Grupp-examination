@@ -11,7 +11,7 @@
   src: url("../../../src/assets/fonts/Rufina-Bold.ttf");
 }
 /*FONTS and TEXT*/
-.button.cart {
+.button.cartbtn {
   background-color: #2e2926;
   border: none;
   border-radius: 5rem;
@@ -19,15 +19,15 @@
   font-family: "PT Serif", serif;
   font-weight: 700;
   font-size: 1.5rem;
-  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+  padding: 0.7rem 1.5rem;
 }
-.button.status {
-  background-color: #ffffff;
+.button.statusbtn {
+  background-color: #f3e4e1;
   border: none;
   border-radius: 5rem;
-  color: #ffffff;
+  color: #2f2926;
   font-family: "PT Serif", serif;
   font-weight: 700;
   font-size: 1.5rem;
-  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+  padding: 0.5rem 1.4rem;
 }/*# sourceMappingURL=Button.css.map */
