@@ -7,15 +7,20 @@ export default function Cart({ cart, removeFromCart ,setCart}) {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpenCart = () => {
     setIsOpen((prevVal) => !prevVal);
-    setCart([]);
+    
   };
 
   return (
     <>
       <Button onClick={handleOpenCart} variant={"cart"}>
         <img src="src/assets/svg/bag.svg" alt="Cart" />
-
-        <span className="items-in-Cart">
+        <span
+          className={
+            cart.reduce((total, item) => total + item.quantity, 0) < 1
+              ? "hidden"
+              : "items-in-Cart"
+          }
+        >
           {cart.reduce((total, item) => total + item.quantity, 0)}
         </span>
       </Button>
@@ -33,7 +38,7 @@ export default function Cart({ cart, removeFromCart ,setCart}) {
                       variant={"delete"}
                       onClick={() => removeFromCart(item.title)}
                     >
-                      ⛔
+                      ❌
                     </Button>
                   </span>
                   <span></span>
@@ -57,7 +62,7 @@ export default function Cart({ cart, removeFromCart ,setCart}) {
               <span className="cart-info">inkl moms + drönarleverans</span>
             </div>
             <Button onClick={handleOpenCart} variant={"inCart"}>
-              <Link to={"/status"}>Take my money!</Link>
+              <Link to={"/status"} onClick={()=>setCart([])}>Take my money!</Link>
             </Button>
           </div>
         </section>

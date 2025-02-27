@@ -66,11 +66,21 @@ function App() {
   };
   
 
+  const removeFromCart = (title) => {
+    setCart((prevCart) =>
+      prevCart
+        .map((item) =>
+          item.title === title ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
+
   return (
     <>
       <BrowserRouter>
         <Nav />
-        <Cart cart={cart} setCart={setCart} />
+        <Cart cart={cart} removeFromCart={removeFromCart} setCart={setCart} />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/menu" element={<Menu addToCart={addToCart} />} />

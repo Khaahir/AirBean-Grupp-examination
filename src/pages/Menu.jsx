@@ -21,8 +21,8 @@ export default function Menu({ addToCart }) {
   }, []);
   return (
     <>
+      <HeaderBG></HeaderBG>
       <section className="menu-container">
-        <HeaderBG></HeaderBG>
         <h1 className="menu-header-title">Meny</h1>
         <ul className="menu-box">
           {data.map((item) => {

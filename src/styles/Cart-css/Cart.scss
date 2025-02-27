@@ -14,7 +14,7 @@
   background-color: $color-brown;
   position: absolute;
   top: 0.5rem;
-  right: 1rem;
+  right: 1.5rem;
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 99rem;
@@ -37,6 +37,8 @@
 .cart-title {
   grid-column: 1/9;
   justify-self: center;
+  font-size: 2rem;
+  margin-top: .5rem;
 }
 .cart-list {
   grid-column: 1/-1;
@@ -54,6 +56,14 @@
   grid-row: 1;
   font-size: $font-size-xl;
   margin-left: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  .button-delete{
+    margin-right: .5rem;
+    background-color: #f3e4e1;
+  }
 }
 
 .cart-item-price {
@@ -126,4 +136,8 @@
 .button-delete {
   border: none;
   font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
 }
