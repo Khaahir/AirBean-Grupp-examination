@@ -1,32 +1,37 @@
-import React, { useState } from "react";
+import closeIcon from "../assets/svg/close.svg"; // Ensure path is correct
 import { useNavigate } from "react-router-dom";
-import CloseIcon from "../assets/svg/close.svg?react";
-import { menuLinks } from "../Componets/Nav/MenuLinks";
-import MenuNav from "../Componets/Nav/MenuNav";
+import { useState } from "react";
 import "../styles/Nav-css/nav.scss";
 
-const Nav = () => {
-  const [isVisible, setIsVisible] = useState(true);
+function Nav() {
   const navigate = useNavigate();
+  const [slide, setSlide] = useState(false);
 
-  const handleClose = () => {
-    navigate(-1); // Gå tillbaka en sida i historiken, om möjligt
-    setIsVisible(false); // Dölj navigationsmenyn
-  };
+  function navSlide() {
+    setSlide(!slide);
+    setTimeout(() => {
+      navigate("/"); // Navigate to the Landing page (assuming it's at "/")
+    }, 500);
+  }
 
-  return isVisible && (
-    <nav className="nav">
-      <img 
-        src={CloseIcon} 
-        alt="Close" 
-        onClick={handleClose} 
-        className="close-icon" 
-      />
-      <section className="links">
-        <MenuNav menuLinks={menuLinks} />
-      </section>
-    </nav>
+  return (
+    <section className={slide ? "flex nav-container slide-out" : "flex nav-container"}>
+      <div className="flex close-btn-container">
+        <button className="close-btn" onClick={navSlide}>
+          <img src={closeIcon} alt="Close" className="close-icon" />
+        </button>
+      </div>
+
+      <div className="flex menu-btn-container">
+        <button className="menu-btn" onClick={() => navigate("/menu")}>Meny</button>
+        <div className="border"></div>
+        <button className="menu-btn" onClick={() => navigate("/about")}>Vårt kaffe</button>
+        <div className="border"></div>
+        <button className="menu-btn" onClick={() => navigate("/status")}>Orderstatus</button>
+        <div className="border"></div>
+      </div>
+    </section>
   );
-};
+}
 
 export default Nav;

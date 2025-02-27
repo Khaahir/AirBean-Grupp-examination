@@ -1,76 +1,112 @@
 @use "../sass/variables" as *;
 @use "../sass/fonts" as *;
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
-body {
-  font-family: $font-primary; // font de variables.scss
+:root {
+    --bg-brown: #2F2926;
+    --bg-white: #ffffff;
+    --ff-pt: 'PT Serif'
 }
 
-.nav {
-  background-color: $color-brown; // Replacing var(--dark-brown) with SCSS variable
-  height: 100vh;
-  width: 80vw;
+.flex {
+    display: flex;
+}
+
+.nav-container {
+    background-color: #2F2926;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slide-out {
+    animation: slideOut 1s forwards;
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.menu-btn-container {
+    padding: 1rem;
+}
+
+.menu-btn-container {
+
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem
+}
+
+.menu-btn-container {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.close-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
 
-  img {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    max-width: 48px;
-    padding: 0.5rem;
-    cursor: pointer;
-  }
-
-  @media (max-width: 375px) {
-    padding: 1rem;
-
-    img {
-      max-width: 40px;
-      top: 12px;
-      left: 12px;
-    }
+  .close-icon {
+    width: 32px; // Adjust the size as needed
+    height: 32px;
   }
 }
 
-.links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
 
-  li {
-    list-style: none;
-    text-align: center;
+.menu-btn {
+    width: 14rem;
+    border: none;
+    background-color: var(--bg-brown);
+    color: white;
+    font-size: 2rem;
+    font-family: var(--ff-pt);
+}
 
-    &::after {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 1px;
-      background-color: rgba(255, 255, 255, 0.3);
-      margin: 8px auto;
-    }
-  }
+.menu-btn.menu-btn:active {
+    width: 14rem;
+    border: none;
+    background-color: var(--bg-brown);
+    color: rgb(192, 192, 192);
+    font-size: 2rem;
+    font-family: var(--ff-pt);
+}
 
-  a {
-    color: $text-light; //la variable
-    font-size: $font-size-xl;
-    font-weight: $font-weight-primary;
-    text-decoration: none;
-  }
-
-  @media (max-width: 375px) {
-    gap: 1.5rem;
-
-    a {
-      font-size: $font-size-l; //TOUT PETITE
-    }
-
-    li::after {
-      width: 30px;
-    }
-  }
+.border {
+    position: relative;
+    width: 3rem;
+    height: 1px;
+    background-color: var(--bg-white);
+    opacity: 20%;
+    margin: 0 auto;
+    margin: 1rem;
 }

@@ -66,13 +66,14 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Nav />
-        <Cart cart={cart} />
+       {/*  <Nav /> måste den vara global?*/} 
+       {/* <Cart cart={cart} /> förstår inte detta? */}
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/menu" element={<Menu addToCart={addToCart} />} />
           <Route path="/about" element={<About />} />
           <Route path="/status" element={<Status />} />
+          <Route path="/nav" element={<Nav/>} />
         </Routes>
       </BrowserRouter>
     </>
