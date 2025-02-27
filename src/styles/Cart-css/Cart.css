@@ -137,4 +137,8 @@
 .button-delete {
   border: none;
   font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=Cart.css.map */

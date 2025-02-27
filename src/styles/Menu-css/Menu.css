@@ -12,21 +12,23 @@
 }
 /*FONTS and TEXT*/
 .menu-container {
-  height: 100vh;
-  width: 100vw;
+  height: 667px;
+  width: 375px;
   background-color: #f3e4e1;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: fixed;
+  overflow-y: scroll;
 }
 
 .menu-header-title {
   font-family: "PT Serif", serif;
   font-weight: 700;
   font-size: 2.6rem;
-  margin-bottom: 3rem;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
 }
 
 .list-container {

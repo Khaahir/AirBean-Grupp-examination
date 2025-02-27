@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import CloseIcon from "../assets/svg/close.svg?react";
 import { Link } from "react-router-dom";
 import "../styles/Nav-css/nav.scss";
 import Button from "../Componets/Button/Button";

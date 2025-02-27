@@ -12,8 +12,13 @@ export default function Cart({ cart, removeFromCart }) {
     <>
       <Button onClick={handleOpenCart} variant={"cart"}>
         <img src="src/assets/svg/bag.svg" alt="Cart" />
-
-        <span className="items-in-Cart">
+        <span
+          className={
+            cart.reduce((total, item) => total + item.quantity, 0) < 1
+              ? "hidden"
+              : "items-in-Cart"
+          }
+        >
           {cart.reduce((total, item) => total + item.quantity, 0)}
         </span>
       </Button>
@@ -31,7 +36,7 @@ export default function Cart({ cart, removeFromCart }) {
                       variant={"delete"}
                       onClick={() => removeFromCart(item.title)}
                     >
-                      ⛔
+                      ❌
                     </Button>
                   </span>
                   <span></span>
