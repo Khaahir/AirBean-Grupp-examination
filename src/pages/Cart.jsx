@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Button from "../Componets/Button/Button";
 import { Link } from "react-router-dom";
+import '../styles/Cart-css/Cart.scss'
 const quantity = 0;
-export default function Cart({ cart, removeFromCart }) {
+export default function Cart({ cart, removeFromCart ,setCart}) {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpenCart = () => {
     setIsOpen((prevVal) => !prevVal);
+    
   };
 
   return (
@@ -60,7 +62,7 @@ export default function Cart({ cart, removeFromCart }) {
               <span className="cart-info">inkl moms + drönarleverans</span>
             </div>
             <Button onClick={handleOpenCart} variant={"inCart"}>
-              <Link to={"/status"}>Take my money!</Link>
+              <Link to={"/status"} onClick={()=>setCart([])}>Take my money!</Link>
             </Button>
           </div>
         </section>
