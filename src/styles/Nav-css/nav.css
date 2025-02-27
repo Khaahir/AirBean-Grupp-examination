@@ -15,67 +15,39 @@ body {
   font-family: "PT Serif", serif;
 }
 
-.nav {
+.nav-container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
   background-color: #2e2926;
-  height: 100vh;
-  width: 80vw;
+  color: #f3e4e1;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-.nav img {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  max-width: 48px;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-@media (max-width: 375px) {
-  .nav {
-    padding: 1rem;
-  }
-  .nav img {
-    max-width: 40px;
-    top: 12px;
-    left: 12px;
-  }
+  z-index: 2;
 }
 
-.links {
+.nav-box {
+  font-size: 2.6rem;
   display: flex;
+  height: 25rem;
+  width: 20rem;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-around;
 }
-.links li {
-  list-style: none;
-  text-align: center;
-}
-.links li::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.3);
-  margin: 8px auto;
-}
-.links a {
-  color: #ffffff;
-  font-size: 2rem;
-  font-weight: 700;
+
+.menu-text {
+  color: #f3e4e1;
   text-decoration: none;
+  border-bottom: 0.2px solid;
 }
-@media (max-width: 375px) {
-  .links {
-    gap: 1.5rem;
-  }
-  .links a {
-    font-size: 1.5rem;
-  }
-  .links li::after {
-    width: 30px;
-  }
+
+.button-nav {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  border-radius: 99rem;
+  z-index: 3;
+  border: none;
 }/*# sourceMappingURL=nav.css.map */

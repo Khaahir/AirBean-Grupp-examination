@@ -1,32 +1,42 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CloseIcon from "../assets/svg/close.svg?react";
-import { menuLinks } from "../Componets/Nav/MenuLinks";
-import MenuNav from "../Componets/Nav/MenuNav";
+import { Link } from "react-router-dom";
 import "../styles/Nav-css/nav.scss";
+import Button from "../Componets/Button/Button";
 
-const Nav = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const navigate = useNavigate();
+function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleClose = () => {
-    navigate(-1); // Gå tillbaka en sida i historiken, om möjligt
-    setIsVisible(false); // Dölj navigationsmenyn
+  const handleNavMenu = () => {
+    setIsOpen((prevVal) => !prevVal);
   };
 
-  return isVisible && (
-    <nav className="nav">
-      <img 
-        src={CloseIcon} 
-        alt="Close" 
-        onClick={handleClose} 
-        className="close-icon" 
-      />
-      <section className="links">
-        <MenuNav menuLinks={menuLinks} />
-      </section>
-    </nav>
+  return (
+    <>
+      <Button onClick={handleNavMenu} variant={"nav"}>
+        {isOpen ? (
+          <img src="src/assets/svg/close.svg" alt="" />
+        ) : (
+          <img src="src/assets/svg/navicon.svg" alt="" />
+        )}
+      </Button>
+      {isOpen && (
+        <section className="nav-container">
+          <section className="nav-box">
+            <Link className="menu-text" onClick={handleNavMenu} to="/menu">
+              <span>Meny</span>
+            </Link>
+            <Link className="menu-text" onClick={handleNavMenu} to="/about">
+              <span>Vårt kaffe</span>
+            </Link>
+            <Link className="menu-text" onClick={handleNavMenu} to="/status">
+              <span className="menu-text">Orderstatus</span>
+            </Link>
+          </section>
+        </section>
+      )}
+    </>
   );
-};
-
+}
 export default Nav;

@@ -2,75 +2,43 @@
 @use "../sass/fonts" as *;
 
 body {
-  font-family: $font-primary; // font de variables.scss
+  font-family: $font-primary;
 }
 
-.nav {
-  background-color: $color-brown; // Replacing var(--dark-brown) with SCSS variable
-  height: 100vh;
-  width: 80vw;
+.nav-container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: $color-brown;
+  color: $color-primary;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-
-  img {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    max-width: 48px;
-    padding: 0.5rem;
-    cursor: pointer;
-  }
-
-  @media (max-width: 375px) {
-    padding: 1rem;
-
-    img {
-      max-width: 40px;
-      top: 12px;
-      left: 12px;
-    }
-  }
+  z-index: 2;
 }
 
-.links {
+.nav-box {
+  font-size: $font-size-xxxl;
   display: flex;
+
+  height: 25rem;
+  width: 20rem;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-around;
+}
 
-  li {
-    list-style: none;
-    text-align: center;
+.menu-text {
+  color: $color-primary;
+  text-decoration: none;
+  border-bottom: 0.2px solid;
+}
 
-    &::after {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 1px;
-      background-color: rgba(255, 255, 255, 0.3);
-      margin: 8px auto;
-    }
-  }
-
-  a {
-    color: $text-light; //la variable
-    font-size: $font-size-xl;
-    font-weight: $font-weight-primary;
-    text-decoration: none;
-  }
-
-  @media (max-width: 375px) {
-    gap: 1.5rem;
-
-    a {
-      font-size: $font-size-l; //TOUT PETITE
-    }
-
-    li::after {
-      width: 30px;
-    }
-  }
+.button-nav {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  border-radius: 99rem;
+  z-index: 3;
+  border: none;
 }

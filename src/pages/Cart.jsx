@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Button from "../Componets/Button/Button";
+import { Link } from "react-router-dom";
 const quantity = 0;
-export default function Cart({ cart }) {
+export default function Cart({ cart, removeFromCart }) {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpenCart = () => {
     setIsOpen((prevVal) => !prevVal);
@@ -11,6 +12,10 @@ export default function Cart({ cart }) {
     <>
       <Button onClick={handleOpenCart} variant={"cart"}>
         <img src="src/assets/svg/bag.svg" alt="Cart" />
+
+        <span className="items-in-Cart">
+          {cart.reduce((total, item) => total + item.quantity, 0)}
+        </span>
       </Button>
 
       {isOpen && (
@@ -21,7 +26,13 @@ export default function Cart({ cart }) {
               {cart.map((item, index) => (
                 <li key={index} className="cart-item">
                   <span className="cart-item-name">
-                    {item.title} : {item.quantity}
+                    {item.title} : {item.quantity}{" "}
+                    <Button
+                      variant={"delete"}
+                      onClick={() => removeFromCart(item.title)}
+                    >
+                      ⛔
+                    </Button>
                   </span>
                   <span></span>
                   <span className="cart-item-price">
@@ -43,7 +54,9 @@ export default function Cart({ cart }) {
               </span>
               <span className="cart-info">inkl moms + drönarleverans</span>
             </div>
-            <Button variant={"inCart"}>Take my money!</Button>
+            <Button onClick={handleOpenCart} variant={"inCart"}>
+              <Link to={"/status"}>Take my money!</Link>
+            </Button>
           </div>
         </section>
       )}
