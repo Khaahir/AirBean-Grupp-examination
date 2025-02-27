@@ -26,7 +26,7 @@ export default function Cart({ cart, removeFromCart, setCart }) {
       // Lägg till 40 kr för dem tillsammans
       total += 40;
     }
-  
+      //retunera totalen
     return total;
   };
   
